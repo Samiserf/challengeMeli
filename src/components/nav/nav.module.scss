@@ -1,0 +1,45 @@
+@import "../../styles/theme-styles.scss";
+
+.containerNav {
+  height: 60px;
+  width: 100%;
+  background-color: $primaryYellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .nav {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .search {
+      border-radius: 3px;
+      width: 92%;
+      height: 70%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: white;
+      padding: 0 0 0 8px;
+      button {
+        width: 60px;
+        height: 100%;
+        border: none;
+        outline: none;
+        background: none;
+        padding: 1px;
+        background-color: $gray-4;
+        border-radius: 3px;
+      }
+      input {
+        height: 100%;
+        width: 100%;
+        border: none;
+        outline: none;
+        background: none;
+        padding: 16px;
+      }
+    }
+  }
+}

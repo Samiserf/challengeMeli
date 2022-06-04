@@ -1,0 +1,10 @@
+@import "./styles/theme-styles.scss";
+
+.app {
+  background-color: $gray-4;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  .appContainer {
+    width: 70%;
+  }
+}

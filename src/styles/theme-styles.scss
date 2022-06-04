@@ -1,0 +1,90 @@
+// Theme Colors
+
+$primaryYellow: #ffe600;
+$gray-1: #333333; // use: color buttons
+$gray-2: #666666; // use: color buttons
+$gray-3: #999999; // use : buttons
+$gray-4: #eeeeee; // darker
+$button-blue: #3483fa; // darker
+
+// Background Class Colors
+
+.primaryBackground {
+  background-color: #ffffff;
+}
+
+// Margins & Paddings
+
+$margin-1: 16px;
+$margin-2: 32px;
+
+// Font Size
+
+@mixin font-level-1 {
+  //   @include common-heading;
+  font-size: calc(12px + 0 * ((100vw - 1200px) / (3840 - 1200)));
+  font-weight: normal;
+  letter-spacing: 1.2px;
+  //   @media screen and (max-width: 1024px) {
+  //     font-size: calc(24px + (60 - 24) * ((100vw - 300px) / (1024 - 300)));
+  //   }
+}
+
+@mixin font-level-2 {
+  //   @include common-heading;
+  font-size: calc(14px + 0 * ((100vw - 1200px) / (3840 - 1200)));
+  font-weight: normal;
+  letter-spacing: 1.2px;
+  //   @media screen and (max-width: 1024px) {
+  //     font-size: calc(24px + (30 - 24) * ((100vw - 300px) / (1024 - 300)));
+  //   }
+}
+
+@mixin font-level-3 {
+  //   @include common-heading;
+  font-size: calc(16px + 0 * ((100vw - 1200px) / (3840 - 1200)));
+  font-weight: normal;
+  letter-spacing: 1.2px;
+  //   @media screen and (max-width: 1024px) {
+  //     font-size: calc(15px + (30 - 24) * ((100vw - 300px) / (1024 - 300)));
+  //   }
+}
+
+@mixin font-level-4 {
+  //   @include common-heading;
+  font-size: calc(18px + 0 * ((100vw - 1200px) / (3840 - 1200)));
+  font-weight: normal;
+  letter-spacing: 1.2px;
+  //   @media screen and (max-width: 1024px) {
+  //     font-size: calc(15px + (30 - 24) * ((100vw - 300px) / (1024 - 300)));
+  //   }
+}
+
+@mixin font-level-5 {
+  //   @include common-heading;
+  font-size: calc(24px + 0 * ((100vw - 1200px) / (3840 - 1200)));
+  font-weight: normal;
+  letter-spacing: 1.2px;
+  //   @media screen and (max-width: 1024px) {
+  //     font-size: calc(15px + (30 - 24) * ((100vw - 300px) / (1024 - 300)));
+  //   }
+}
+
+@mixin font-level-6 {
+  //   @include common-heading;
+  font-size: calc(28px + 0 * ((100vw - 1200px) / (3840 - 1200)));
+  font-weight: normal;
+  letter-spacing: 1.2px;
+  //   @media screen and (max-width: 1024px) {
+  //     font-size: calc(15px + (30 - 24) * ((100vw - 300px) / (1024 - 300)));
+  //   }
+}
+
+@mixin font-level-7 {
+  //   @include common-heading;
+  font-size: calc(46px + 0 * ((100vw - 1200px) / (3840 - 1200)));
+  letter-spacing: 1.2px;
+  //   @media screen and (max-width: 1024px) {
+  //     font-size: calc(15px + (30 - 24) * ((100vw - 300px) / (1024 - 300)));
+  //   }
+}

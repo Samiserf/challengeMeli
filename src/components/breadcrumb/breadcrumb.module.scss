@@ -1,0 +1,17 @@
+@import "../../styles/theme-styles.scss";
+
+.containerBreadcrumb {
+  width: 70%;
+  margin: $margin-1 0 $margin-1 0;
+  a {
+    color: $gray-3;
+    @include font-level-2;
+    text-decoration: none;
+  }
+  span {
+    padding: 0 6px;
+    color: $gray-3;
+    @include font-level-4;
+    vertical-align: middle;
+  }
+}

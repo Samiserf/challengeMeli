@@ -1,6 +1,7 @@
 import React from "react";
 import css from "./itemPreview.module.scss";
 import { Link } from "react-router-dom";
+import shippingImage from "../../shipping.png";
 
 export default function ItemPreview({ item }) {
   return (
@@ -15,8 +16,7 @@ export default function ItemPreview({ item }) {
           <Link to={`/items/${item.id}`}>
             <h2>$ {item.price.amount}</h2>
           </Link>
-          {/* TO DO LOGICA ENVIO */}
-          {/* <span></span> */}
+          {item.free_shipping && <img src={shippingImage} alt="isShiping" />}
         </div>
         <p>{item.title}</p>
         <p>Completo único!</p>

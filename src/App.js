@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import css from "./App.module.scss";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Nav from "./components/nav/nav";
@@ -9,14 +9,19 @@ import DetaultItemsPage from "./pages/detailItems/detailItems";
 function App() {
   let query = useQuery();
 
-  const [search, setSearch] = useState(query);
+  const [search, setSearch] = useState("");
+
+  useEffect(() => {
+    query && setSearch(query);
+  }, [query]);
+
   return (
     <div className={css.app}>
       {/* <div className={css.appContainer}> */}
       <Nav search={search} setSearch={setSearch} />
       <Routes>
         <Route exact path="/" element={<HomePage />} />
-        <Route path="/items" element={<ItemsPage />} />
+        <Route path="/items" element={<ItemsPage query={query} />} />
         <Route path="/items/:itemId" element={<DetaultItemsPage />} />
       </Routes>
       {/* </div> */}

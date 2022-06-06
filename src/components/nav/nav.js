@@ -1,7 +1,8 @@
 import React from "react";
 import css from "./nav.module.scss";
 import logoMeli from "../../Logo_ML.png";
-import { useNavigate, Link, useLocation } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+import searchIcon from "../../search.png";
 
 export default function Nav({ search, setSearch }) {
   const navigate = useNavigate();
@@ -21,9 +22,13 @@ export default function Nav({ search, setSearch }) {
           />
           <button
             type="button"
-            onClick={() => navigate(`/items?search=${search}`)}
+            onClick={() =>
+              search !== null &&
+              search !== "" &&
+              navigate(`/items?search=${search}`)
+            }
           >
-            {/* <img>L</img> */}L
+            <img src={searchIcon} alt="search" />
           </button>
         </form>
       </div>

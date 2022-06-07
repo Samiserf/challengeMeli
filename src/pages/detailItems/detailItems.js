@@ -3,6 +3,7 @@ import css from "./detailItem.module.scss";
 import { useParams } from "react-router-dom";
 import { URL_API } from "../../const/config.js";
 import Breadcrumb from "../../components/breadcrumb/breadcrumb";
+import { convertFormatCurrencies } from "../../utils/shareFunctions";
 
 export default function ItemsDetailPage() {
   const { itemId } = useParams();
@@ -18,10 +19,25 @@ export default function ItemsDetailPage() {
       });
   }, [itemId]);
 
+  const price =
+    itemDetail.price && itemDetail.price.amount
+      ? convertFormatCurrencies(itemDetail.price.amount, 2)
+      : 0;
+
+  console.log(price);
+
+  const categoriesMock = [
+    "Electronica, audio y video",
+    "Ipod",
+    "Reproductores",
+    "Touch iPod",
+    "32 GB",
+  ];
+
   return (
     <>
       <div className={css.containerDetailItem}>
-        <Breadcrumb />
+        <Breadcrumb categories={categoriesMock} />
         <div className={css.detailItem}>
           <div className={css.leftSideContainer}>
             <div className={css.imageDetail}>
@@ -39,8 +55,12 @@ export default function ItemsDetailPage() {
             </span>
             <h2>{itemDetail.title}</h2>
             <span>
-              $ {itemDetail.price && itemDetail.price.amount}
-              <sup>00</sup>
+              ${price === 0 ? 0 : price.substring(1, price.length - 3)}
+              <sup>
+                {price === 0
+                  ? "00"
+                  : price.substring(price.length - 2, price.length)}
+              </sup>
             </span>
             <button
               type="button"

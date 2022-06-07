@@ -13,16 +13,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media screen and (max-width: 780px) {
+      width: 90%;
+    }
     .search {
       border-radius: 3px;
-      width: 92%;
+      width: 94%;
       height: 70%;
       display: flex;
       justify-content: space-between;
       align-items: center;
       background: white;
-      padding: 0 0 0 8px;
       button {
+        cursor: pointer;
         width: 60px;
         height: 100%;
         border: none;
@@ -38,7 +41,7 @@
         border: none;
         outline: none;
         background: none;
-        padding: 16px;
+        padding: 0 16px 0 16px;
       }
     }
   }

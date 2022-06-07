@@ -3,6 +3,9 @@
 .containerBreadcrumb {
   width: 70%;
   margin: $margin-1 0 $margin-1 0;
+  @media screen and (max-width: 780px) {
+    width: 90%;
+  }
   a {
     color: $gray-3;
     @include font-level-2;

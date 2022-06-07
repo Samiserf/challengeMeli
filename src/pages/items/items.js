@@ -17,10 +17,12 @@ export default function Items({ query }) {
       });
   }, [query]);
 
+  const categoriesMock = ["Transporte", "Autos", "Negro", "Peugeot", "308"];
+
   return (
     <>
       <div className={css.containerListItems}>
-        <Breadcrumb />
+        <Breadcrumb categories={categoriesMock} />
         <div className={css.ListItems}>
           {items.length > 0 &&
             items.map((item) => <ItemPreview key={item.id} item={item} />)}

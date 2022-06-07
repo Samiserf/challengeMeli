@@ -2,6 +2,7 @@ import React from "react";
 import css from "./itemPreview.module.scss";
 import { Link } from "react-router-dom";
 import shippingImage from "../../shipping.png";
+import { convertFormatCurrencies } from "../../utils/shareFunctions";
 
 export default function ItemPreview({ item }) {
   return (
@@ -14,7 +15,15 @@ export default function ItemPreview({ item }) {
       <div className={css.containerInfoItem}>
         <div>
           <Link to={`/items/${item.id}`}>
-            <h2>$ {item.price.amount}</h2>
+            <h2>
+              $
+              {item.price.amount
+                ? convertFormatCurrencies(item.price.amount, 2).substring(
+                    1,
+                    convertFormatCurrencies(item.price.amount, 2).length - 3
+                  )
+                : 0}
+            </h2>
           </Link>
           {item.free_shipping && <img src={shippingImage} alt="isShiping" />}
         </div>

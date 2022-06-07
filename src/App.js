@@ -12,7 +12,7 @@ function App() {
   const [search, setSearch] = useState("");
 
   useEffect(() => {
-    query && setSearch(query);
+    setSearch(query || "");
   }, [query]);
 
   return (

@@ -22,4 +22,6 @@ Se utilizaron las siguientes tecnologias :
 
 Para ejecutar este proyecto escriba el siguiente comando en la raiz del proyecto.
 
+
+### `npm install`
 ### `npm start`

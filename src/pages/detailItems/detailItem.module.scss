@@ -10,72 +10,95 @@
     height: auto;
     background-color: white;
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    .leftSideContainer {
+    .contentDetailItem {
       display: flex;
-      flex-direction: column;
-      height: 100%;
-      width: 75%;
-      margin-left: 32px;
-      .imageDetail {
-        max-width: 680px;
-        height: auto;
-        margin-top: 32px;
-        img {
-          width: 100%;
-          height: 100%;
-        }
-      }
-      .detailItem {
-        margin-top: 10%;
+      flex-direction: row;
+      width: 100%;
+      @media screen and (max-width: 1000px) {
         display: flex;
         flex-direction: column;
-        width: 95%;
-        h3 {
-          @include font-level-6;
+      }
+      .leftSideContainer {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 75%;
+        margin-left: 32px;
+        .imageDetail {
+          max-width: 680px;
+          height: auto;
+          margin-top: 32px;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+      .rightSideContainer {
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: $margin-2 $margin-2 0;
+
+        @media screen and (max-width: 1000px) {
+          width: 80%;
+        }
+
+        span:nth-child(1) {
+          @include font-level-1;
           margin: 0;
         }
-        p {
-          @include font-level-3;
-          color: $gray-3;
-          margin: $margin-2 0 $margin-2 0;
+        h2 {
+          @include font-level-5;
+          margin: $margin-1 0 $margin-2 0;
+          font-weight: bolder;
+        }
+        span {
+          @include font-level-7;
+          margin: 0 0 $margin-2 0;
+          @media screen and (max-width: 1350px) {
+            font-size: 35px;
+          }
+          sup {
+            line-height: 0;
+            font-size: 23px;
+          }
+        }
+        button {
+          background-color: $button-blue;
+          color: white;
+          padding: 12px 4px 12px 4px;
+          width: 100%;
+          border-radius: 4px;
+          border: none;
+          @include font-level-4;
+          cursor: pointer;
         }
       }
     }
-    .rightSideContainer {
-      width: 25%;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      margin: $margin-2 $margin-2 0 0;
-      span:nth-child(1) {
-        @include font-level-1;
-        margin: 0;
-      }
-      h2 {
-        @include font-level-5;
-        margin: $margin-1 0 $margin-2 0;
-        font-weight: bolder;
-      }
-      span {
-        @include font-level-7;
-        margin: 0 0 $margin-2 0;
-        sup {
-          line-height: 0;
-          font-size: 23px;
-        }
-      }
-      button {
-        background-color: $button-blue;
-        color: white;
-        padding: 12px 4px 12px 4px;
-        width: 100%;
-        border-radius: 4px;
-        border: none;
-        @include font-level-4;
-        cursor: pointer;
-      }
+  }
+  .descriptionItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 10% 0 0 32px;
+    width: 70%;
+    @media screen and (max-width: 1000px) {
+      width: 80%;
+    }
+    h3 {
+      @include font-level-6;
+      margin: 0;
+    }
+    p {
+      @include font-level-3;
+      color: $gray-3;
+      margin: $margin-2 0 $margin-2 0;
     }
   }
 }

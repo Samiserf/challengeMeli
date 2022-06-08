@@ -1,17 +1,19 @@
 import React from "react";
 import css from "./nav.module.scss";
-import logoMeli from "../../Logo_ML.png";
+import logoMeli from "../../images/Logo_ML.png";
 import { useNavigate, Link } from "react-router-dom";
-import searchIcon from "../../search.png";
+import searchIcon from "../../images/search.png";
 
 export default function Nav({ search, setSearch }) {
   const navigate = useNavigate();
   return (
     <div className={css.containerNav}>
       <div className={css.nav}>
-        <Link to="/">
-          <img alt="logo meli" src={logoMeli} />
-        </Link>
+        <h1>
+          <Link to="/">
+            <img alt="Mercado Libre" src={logoMeli} />
+          </Link>
+        </h1>
         <form className={css.search}>
           <input
             type="text"

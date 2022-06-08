@@ -1,20 +1,20 @@
 import React from "react";
 import css from "./itemPreview.module.scss";
 import { Link } from "react-router-dom";
-import shippingImage from "../../shipping.png";
+import shippingImage from "../../images/shipping.png";
 import { convertFormatCurrencies } from "../../utils/shareFunctions";
 
 export default function ItemPreview({ item }) {
   return (
     <div className={css.containerItemPreview}>
       <div className={css.contImage}>
-        <Link to={`/items/${item.id}`}>
-          <img src={item.picture} />
+        <Link aria-label="detalle del producto" to={`/items/${item.id}`}>
+          <img src={item.picture} alt={"item de venta" + item.title} />
         </Link>
       </div>
       <div className={css.containerInfoItem}>
         <div>
-          <Link to={`/items/${item.id}`}>
+          <Link aria-label="detalle del producto" to={`/items/${item.id}`}>
             <h2>
               $
               {item.price.amount

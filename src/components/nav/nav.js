@@ -23,7 +23,7 @@ export default function Nav({ search, setSearch }) {
             value={search}
           />
           <button
-            type="button"
+            type="submit"
             onClick={() =>
               search !== null &&
               search !== "" &&
